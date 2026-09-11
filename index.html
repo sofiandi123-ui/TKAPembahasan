@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latihan Soal & Pembahasan English TKA | SMAN 22 Bandung</title>
+<style>
+:root{--primary:#0b5d4b;--secondary:#eaf6f1;--accent:#f0a500;--danger:#b42318;--success:#2e7d32;--ink:#17211f;--muted:#64706c;--card:#fff;--line:#dbe5e1;--tooltip-bg:#0f172a}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f7f6;color:var(--ink)}
+header{background:linear-gradient(135deg,#0b5d4b,#083d33);color:#fff;padding:22px 18px;position:sticky;top:0;z-index:20;box-shadow:0 2px 12px #0002}
+.header-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:15px;align-items:center}
+h1{font-size:22px;margin:0 0 5px}.sub{opacity:.9;font-size:13px}
+main{max-width:1100px;margin:22px auto;padding:0 15px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:0 3px 12px #0000000a}
+.login{max-width:650px;margin:35px auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-weight:700;font-size:14px;display:block;margin-bottom:7px}input,select{width:100%;padding:12px;border:1px solid #bfcfc9;border-radius:9px;font-size:15px}
+button{border:0;border-radius:9px;padding:10px 16px;font-weight:700;cursor:pointer}.primary{background:var(--primary);color:white}.secondary{background:#e9efed;color:var(--ink)}
+button:disabled{opacity:.5;cursor:not-allowed}.error{color:var(--danger);font-weight:700;margin-top:10px}.hidden{display:none!important}
+.text-box{background:#f7faf9;border-left:5px solid var(--primary);padding:18px;border-radius:8px;line-height:1.65;margin-bottom:20px}
+.question{border:1px solid var(--line);border-radius:12px;padding:17px;margin:15px 0;background:#fff}.qhead{font-weight:700;margin-bottom:12px}.difficulty{font-size:11px;color:var(--muted);float:right}
+.option{display:block;padding:9px 10px;margin:6px 0;border-radius:7px;cursor:pointer;border:1px solid transparent}.option:hover{background:#f1f6f4}.option input{width:auto;margin-right:8px}
+.badge{display:inline-block;padding:5px 8px;border-radius:20px;background:var(--secondary);color:var(--primary);font-size:12px;font-weight:700}
+.progress{height:8px;background:#dfe9e5;border-radius:20px;overflow:hidden;margin:10px 0}.bar{height:100%;background:var(--primary);width:0}
+.sticky-actions{position:sticky;bottom:10px;background:#ffffffef;padding:12px;border:1px solid var(--line);border-radius:12px;backdrop-filter:blur(6px);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.result{max-width:700px;margin:40px auto;text-align:center}.score{font-size:64px;color:var(--primary);font-weight:800}
+.small{font-size:12px;color:var(--muted)}footer{text-align:center;padding:30px;color:var(--muted);font-size:12px}
+
+/* Styling Khusus Pembahasan */
+.explanation-box{margin-top:15px;padding:15px;border-radius:8px;background:#f8f9fa;border:1px solid #dee2e6;font-size:14px;line-height:1.6}
+.exp-correct{border-left:5px solid var(--success);background:#f4fbf7}
+.exp-wrong{border-left:5px solid var(--danger);background:#fdf2f2}
+.status-tag{font-weight:700;display:inline-block;margin-bottom:8px;padding:3px 8px;border-radius:4px;color:#fff}
+.tag-correct{background:var(--success)}.tag-wrong{background:var(--danger)}
+.opt-correct-highlight{background:#e8f5e9 !important;border-color:#4caf50 !important;font-weight:bold}
+.opt-wrong-highlight{background:#ffebee !important;border-color:#ef5350 !important}
+
+/* --- FITUR CURSOR TERJEMAHAN (MURNI HOVER) --- */
+[data-translate] {
+    position: relative;
+    border-bottom: 2px dashed var(--primary);
+    cursor: help;
+    color: #0b5d4b;
+    font-weight: 600;
+    padding: 0 2px;
+}
+
+[data-translate]::after {
+    content: "Arti: " attr(data-translate);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--tooltip-bg);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: normal;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, bottom 0.2s;
+    z-index: 30;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+[data-translate]::before {
+    content: "";
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--tooltip-bg) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 30;
+}
+
+[data-translate]:hover::after {
+    opacity: 1;
+    bottom: 140%;
+}
+
+[data-translate]:hover::before {
+    opacity: 1;
+    bottom: 130%;
+}
+
+/* --- TOMBOL AUDIO UNTUK TEKS BACAAN --- */
+.audio-btn {
+    background: var(--accent);
+    color: var(--ink);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+.audio-btn:hover { background: #d89400; }
+.audio-btn.playing { background: var(--danger); color: white; }
+
+@media(max-width:700px){.grid{grid-template-columns:1fr}.header-inner{align-items:flex-start}}
+</style>
+</head>
+<body>
+<header>
+ <div class="header-inner">
+  <div><h1>Latihan Soal & Pembahasan TKA Bahasa Inggris</h1><div class="sub">Kelas XII • SMAN 22 Bandung • Mode Latihan Mandiri</div></div>
+ </div>
+</header>
+
+<main>
+<section id="loginCard" class="card login">
+ <h2>Identitas Siswa</h2>
+ <p>Isi nama dan kelas untuk memulai mode latihan soal dan pembahasan interaktif.</p>
+ <div class="grid">
+  <div><label for="studentName">Nama Lengkap</label><input id="studentName" autocomplete="off" placeholder="Masukkan nama..."></div>
+  <div><label for="studentClass">Kelas</label>
+   <select id="studentClass">
+    <option value="">-- Pilih Kelas --</option>
+    <option>XII 1</option><option>XII 2</option><option>XII 3</option><option>XII 4</option>
+    <option>XII 5</option><option>XII 6</option><option>XII 7</option><option>XII 8</option>
+    <option>XII 9</option><option>XII 10</option><option>XII 11</option><option>XII 12</option>
+   </select>
+  </div>
+ </div>
+ <button class="primary" id="startBtn" style="margin-top:16px; width:100%">Mulai Latihan</button>
+ <div id="loginError" class="error"></div>
+</section>
+
+<section id="examSection" class="hidden">
+ <div class="card">
+  <span class="badge" id="studentBadge"></span>
+  <div class="progress"><div id="progressBar" class="bar"></div></div>
+  <div class="small">Jawab soal dan klik pilihan ganda untuk melihat kunci serta penjelasan detail dalam Bahasa Indonesia secara langsung. Nilai tidak akan dikirimkan ke server.</div>
+ </div>
+
+ <!-- Box Teks Bacaan Bahasa Inggris Utama -->
+ <div class="card">
+  <button type="button" class="audio-btn" onclick="speakText('readingPassage', this)">
+    <span>🔊</span> Listen to Passage
+  </button>
+  <div class="text-box" id="readingPassage">
+    Raja Ampat is an Indonesian archipelago located off the northwest tip of Bird's Head Peninsula in West Papua. 
+    The <span data-translate="Daratan">terrestrial</span> <span data-translate="Bentang alam">landscape</span> is <span data-translate="Dicirikan / Ditandai">characterized</span> by dramatic, vegetation-covered limestone karst <span data-translate="Formasi / Bentukan">formations</span> that emerge steeply from the crystal-clear turquoise waters. 
+    Local communities work closely with international conservation organizations to manage marine protected areas and regulate sustainable ecotourism.
+  </div>
+ </div>
+
+ <div id="questions"></div>
+
+ <div class="sticky-actions">
+   <div>Selesai dibahas: <b id="answeredCount">0</b>/<span id="totalCount">3</span> soal</div>
+   <button class="primary" id="finishBtn">Selesaikan Latihan</button>
+ </div>
+</section>
+
+<section id="resultSection" class="card result hidden">
+ <h2>Latihan Selesai!</h2>
+ <div class="score" id="finalScore">0</div>
+ <p id="resultText"></p>
+ <button class="secondary" onclick="location.reload()">Ulangi Latihan</button>
+</section>
+</main>
+
+<footer>SMAN 22 Bandung • English Assessment • Mode Latihan Mandiri</footer>
+
+<script>
+/* =========================
+   BANK SOAL & PEMBAHASAN DETIL (Telah Diperbaiki & Ditutup Rapi)
+   ========================= */
+const questionsData = [
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":1,
+    "q":"According to the first paragraph, what physical feature <span data-translate='Dicirikan'>characterizes</span> the <span data-translate='Daratan'>terrestrial</span> <span data-translate='Bentang alam'>landscape</span> of Raja Ampat?",
+    "opts":[
+      "Extensive coastal lowlands covered with dense coconut palm plantations.",
+      "Steep limestone karst formations covered with green vegetation.",
+      "Flat volcanic plains surrounded by shallow muddy mangrove swamps.",
+      "Deep granite canyons formed by continuous river erosion over centuries.",
+      "Broad sand dunes shaped by heavy seasonal winds from the ocean."
+    ],
+    "a": 1,
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Pertanyaan ini menanyakan ciri fisik daratan (terrestrial landscape) Raja Ampat berdasarkan paragraf pertama. Pada teks disebutkan: <i>\"The terrestrial landscape is characterized by dramatic, vegetation-covered limestone karst formations that emerge steeply...\"</i> (Lansekap daratannya dicirikan oleh formasi karst batu kapur terjal yang tertutup vegetasi hijau). Pilihan B mencerminkan fakta tersebut secara tepat."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":1,
+    "q":"What is the primary purpose of the author in writing the second paragraph?",
+    "opts":[
+      "To explain how native communities manage international tourist accommodations.",
+      "To criticize commercial overfishing activities conducted by foreign fleets.",
