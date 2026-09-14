@@ -5,154 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Latihan Soal & Pembahasan English TKA | SMAN 22 Bandung</title>
 <style>
-:root {
-  --primary: #0b5d4b;
-  --primary-hover: #08483a;
-  --secondary: #eaf6f1;
-  --accent: #f0a500;
-  --danger: #b42318;
-  --success: #2e7d32;
-  --ink: #17211f;
-  --muted: #64706c;
-  --card: #fff;
-  --line: #dbe5e1;
-  --tooltip-bg: #0f172a;
-}
+:root{--primary:#0b5d4b;--secondary:#eaf6f1;--accent:#f0a500;--danger:#b42318;--success:#2e7d32;--ink:#17211f;--muted:#64706c;--card:#fff;--line:#dbe5e1}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f7f6;color:var(--ink)}
+header{background:linear-gradient(135deg,#0b5d4b,#083d33);color:#fff;padding:22px 18px;position:sticky;top:0;z-index:20;box-shadow:0 2px 12px #0002}
+.header-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:15px;align-items:center}
+h1{font-size:22px;margin:0 0 5px}.sub{opacity:.9;font-size:13px}
+main{max-width:1100px;margin:22px auto;padding:0 15px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:0 3px 12px #0000000a}
+.login{max-width:650px;margin:35px auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-weight:700;font-size:14px;display:block;margin-bottom:7px}input,select{width:100%;padding:12px;border:1px solid #bfcfc9;border-radius:9px;font-size:15px}
+button{border:0;border-radius:9px;padding:10px 16px;font-weight:700;cursor:pointer}.primary{background:var(--primary);color:white}.secondary{background:#e9efed;color:var(--ink)}
+button:disabled{opacity:.5;cursor:not-allowed}.error{color:var(--danger);font-weight:700;margin-top:10px}.hidden{display:none!important}
+.text-box{background:#f7faf9;border-left:5px solid var(--primary);padding:18px;border-radius:8px;line-height:1.65;margin-bottom:20px}
+.question{border:1px solid var(--line);border-radius:12px;padding:17px;margin:15px 0;background:#fff}.qhead{font-weight:700;margin-bottom:12px}.difficulty{font-size:11px;color:var(--muted);float:right}
+.option{display:block;padding:9px 10px;margin:6px 0;border-radius:7px;cursor:pointer;border:1px solid transparent}.option:hover{background:#f1f6f4}.option input{width:auto;margin-right:8px}
+.badge{display:inline-block;padding:5px 8px;border-radius:20px;background:var(--secondary);color:var(--primary);font-size:12px;font-weight:700}
+.progress{height:8px;background:#dfe9e5;border-radius:20px;overflow:hidden;margin:10px 0}.bar{height:100%;background:var(--primary);width:0}
+.sticky-actions{position:sticky;bottom:10px;background:#ffffffef;padding:12px;border:1px solid var(--line);border-radius:12px;backdrop-filter:blur(6px);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.result{max-width:700px;margin:40px auto;text-align:center}.score{font-size:64px;color:var(--primary);font-weight:800}
+.small{font-size:12px;color:var(--muted)}footer{text-align:center;padding:30px;color:var(--muted);font-size:12px}
 
-* { box-sizing: border-box; }
-body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f4f7f6; color: var(--ink); }
-
-header { background: linear-gradient(135deg, #0b5d4b, #083d33); color: #fff; padding: 22px 18px; position: sticky; top: 0; z-index: 20; box-shadow: 0 2px 12px #0002; }
-.header-inner { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; gap: 15px; align-items: center; }
-h1 { font-size: 22px; margin: 0 0 5px; }
-.sub { opacity: .9; font-size: 13px; }
-
-main { max-width: 1100px; margin: 22px auto; padding: 0 15px; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; margin-bottom: 18px; box-shadow: 0 3px 12px #0000000a; }
-
-.login { max-width: 650px; margin: 35px auto; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-label { font-weight: 700; font-size: 14px; display: block; margin-bottom: 7px; }
-input, select { width: 100%; padding: 12px; border: 1px solid #bfcfc9; border-radius: 9px; font-size: 15px; }
-
-button { border: 0; border-radius: 9px; padding: 10px 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
-.primary { background: var(--primary); color: white; }
-.primary:hover { background: var(--primary-hover); }
-.secondary { background: #e9efed; color: var(--ink); }
-button:disabled { opacity: .5; cursor: not-allowed; }
-.error { color: var(--danger); font-weight: 700; margin-top: 10px; }
-.hidden { display: none !important; }
-
-/* Styling Teks Bacaan & Audio Header */
-.passage-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px; }
-.passage-title { font-size: 16px; font-weight: 700; color: var(--primary); }
-
-.audio-btn {
-  background: var(--accent);
-  color: var(--ink);
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background 0.2s;
-}
-.audio-btn:hover { background: #d89400; }
-.audio-btn.playing { background: var(--danger); color: white; }
-
-.text-box {
-  background: #f7faf9;
-  border-left: 5px solid var(--primary);
-  padding: 18px;
-  border-radius: 8px;
-  line-height: 1.75;
-  margin-bottom: 20px;
-  font-size: 15px;
-}
-
-/* --- FITUR HOVER TERJEMAHAN KATA SUKAR --- */
-[data-translate] {
-  position: relative;
-  border-bottom: 2px dashed var(--primary);
-  cursor: help;
-  color: #0b5d4b;
-  font-weight: 600;
-  padding: 0 2px;
-}
-
-[data-translate]::after {
-  content: "Arti: " attr(data-translate);
-  position: absolute;
-  bottom: 130%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--tooltip-bg);
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: normal;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s, bottom 0.2s;
-  z-index: 30;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-[data-translate]::before {
-  content: "";
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 6px;
-  border-style: solid;
-  border-color: var(--tooltip-bg) transparent transparent transparent;
-  opacity: 0;
-  transition: opacity 0.2s;
-  z-index: 30;
-}
-
-[data-translate]:hover::after { opacity: 1; bottom: 140%; }
-[data-translate]:hover::before { opacity: 1; bottom: 130%; }
-
-.question { border: 1px solid var(--line); border-radius: 12px; padding: 17px; margin: 15px 0; background: #fff; }
-.qhead { font-weight: 700; margin-bottom: 12px; line-height: 1.5; }
-.difficulty { font-size: 11px; color: var(--muted); float: right; background: var(--secondary); padding: 2px 8px; border-radius: 4px; }
-.option { display: block; padding: 10px 12px; margin: 6px 0; border-radius: 7px; cursor: pointer; border: 1px solid var(--line); transition: all 0.2s; }
-.option:hover { background: #f1f6f4; }
-.option input { width: auto; margin-right: 10px; }
-
-.badge { display: inline-block; padding: 5px 12px; border-radius: 20px; background: var(--secondary); color: var(--primary); font-size: 13px; font-weight: 700; }
-.progress { height: 8px; background: #dfe9e5; border-radius: 20px; overflow: hidden; margin: 10px 0; }
-.bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.3s; }
-
-.sticky-actions { position: sticky; bottom: 10px; background: #ffffffef; padding: 12px 18px; border: 1px solid var(--line); border-radius: 12px; backdrop-filter: blur(6px); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-.result { max-width: 700px; margin: 40px auto; text-align: center; }
-.score { font-size: 64px; color: var(--primary); font-weight: 800; }
-.small { font-size: 12px; color: var(--muted); }
-footer { text-align: center; padding: 30px; color: var(--muted); font-size: 12px; }
-
-/* Pembahasan */
-.explanation-box { margin-top: 15px; padding: 15px; border-radius: 8px; background: #f8f9fa; border: 1px solid #dee2e6; font-size: 14px; line-height: 1.6; }
-.exp-correct { border-left: 5px solid var(--success); background: #f4fbf7; }
-.exp-wrong { border-left: 5px solid var(--danger); background: #fdf2f2; }
-.status-tag { font-weight: 700; display: inline-block; margin-bottom: 8px; padding: 3px 8px; border-radius: 4px; color: #fff; }
-.tag-correct { background: var(--success); }
-.tag-wrong { background: var(--danger); }
-.opt-correct-highlight { background: #e8f5e9 !important; border-color: #4caf50 !important; font-weight: bold; }
-.opt-wrong-highlight { background: #ffebee !important; border-color: #ef5350 !important; }
-
-@media(max-width:700px) { .grid { grid-template-columns: 1fr; } .header-inner { align-items: flex-start; } }
+/* Styling Khusus Pembahasan */
+.explanation-box{margin-top:15px;padding:15px;border-radius:8px;background:#f8f9fa;border:1px solid #dee2e6;font-size:14px;line-height:1.6}
+.exp-correct{border-left:5px solid var(--success);background:#f4fbf7}
+.exp-wrong{border-left:5px solid var(--danger);background:#fdf2f2}
+.status-tag{font-weight:700;display:inline-block;margin-bottom:8px;padding:3px 8px;border-radius:4px;color:#fff}
+.tag-correct{background:var(--success)}.tag-wrong{background:var(--danger)}
+.opt-correct-highlight{background:#e8f5e9 !important;border-color:#4caf50 !important;font-weight:bold}
+.opt-wrong-highlight{background:#ffebee !important;border-color:#ef5350 !important}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.header-inner{align-items:flex-start}}
 </style>
 </head>
 <body>
-
 <header>
  <div class="header-inner">
   <div><h1>Latihan Soal & Pembahasan TKA Bahasa Inggris</h1><div class="sub">Kelas XII • SMAN 22 Bandung • Mode Latihan Mandiri</div></div>
@@ -160,7 +43,6 @@ footer { text-align: center; padding: 30px; color: var(--muted); font-size: 12px
 </header>
 
 <main>
-<!-- CARD LOGIN / IDENTITAS -->
 <section id="loginCard" class="card login">
  <h2>Identitas Siswa</h2>
  <p>Isi nama dan kelas untuk memulai mode latihan soal dan pembahasan interaktif.</p>
@@ -179,39 +61,21 @@ footer { text-align: center; padding: 30px; color: var(--muted); font-size: 12px
  <div id="loginError" class="error"></div>
 </section>
 
-<!-- SECTION UJIAN -->
 <section id="examSection" class="hidden">
  <div class="card">
   <span class="badge" id="studentBadge"></span>
   <div class="progress"><div id="progressBar" class="bar"></div></div>
-  <div class="small">Arahkan kursor ke kata berpola garis putus-putus untuk melihat terjemahan. Jawab soal dan klik pilihan ganda untuk melihat kunci serta penjelasan.</div>
- </div>
-
- <!-- BACAAN TEKS TEKS 1 -->
- <div class="card">
-  <div class="passage-header">
-    <span class="passage-title">Reading Passage: Raja Ampat Ecosystem</span>
-    <button type="button" class="audio-btn" id="audioBtn" onclick="toggleSpeech('readingPassage', this)">
-      <span>🔊</span> Listen Passage (Natural Voice)
-    </button>
-  </div>
-  <div class="text-box" id="readingPassage">
-    Raja Ampat is an Indonesian archipelago located off the northwest tip of Bird's Head Peninsula in West Papua. 
-    The <span data-translate="Daratan">terrestrial</span> <span data-translate="Bentang alam">landscape</span> is <span data-translate="Dicirikan / Ditandai">characterized</span> by dramatic, vegetation-covered limestone karst <span data-translate="Formasi / Bentukan">formations</span> that emerge steeply from the crystal-clear turquoise waters. 
-    <br><br>
-    Local communities work closely with international conservation organizations to manage <span data-translate="Kawasan perlindungan laut">marine protected areas</span> and regulate sustainable <span data-translate="Ekowisata">ecotourism</span>. Although its <span data-translate="Terpencil">remote</span> location presents logistical challenges, this isolation has effectively protected the fragile ecosystem from the destructive impacts of mass tourism.
-  </div>
+  <div class="small">Jawab soal dan klik tombol <b>"Cek Jawaban & Pembahasan"</b> untuk melihat kunci serta penjelasan detail dalam Bahasa Indonesia. Nilai tidak akan dikirimkan ke server.</div>
  </div>
 
  <div id="questions"></div>
 
  <div class="sticky-actions">
-   <div>Selesai dibahas: <b id="answeredCount">0</b>/<span id="totalCount">0</span> soal</div>
+   <div>Selesai dibahas: <b id="answeredCount">0</b>/50 soal</div>
    <button class="primary" id="finishBtn">Selesaikan Latihan</button>
  </div>
 </section>
 
-<!-- RESULT SECTION -->
 <section id="resultSection" class="card result hidden">
  <h2>Latihan Selesai!</h2>
  <div class="score" id="finalScore">0</div>
@@ -228,220 +92,734 @@ footer { text-align: center; padding: 30px; color: var(--muted); font-size: 12px
    ========================= */
 const questions = [
   {
-    "q": "According to the first paragraph, what physical feature <span data-translate='Dicirikan'>characterizes</span> the <span data-translate='Daratan'>terrestrial</span> <span data-translate='Bentang alam'>landscape</span> of Raja Ampat?",
-    "difficulty": "L1",
-    "opts": [
+    "type":"single","subtype":"single","difficulty":"L1","text":1,
+    "q":"According to the first paragraph, what physical feature characterizes the terrestrial landscape of Raja Ampat?",
+    "opts":[
       "Extensive coastal lowlands covered with dense coconut palm plantations.",
       "Steep limestone karst formations covered with green vegetation.",
       "Flat volcanic plains surrounded by shallow muddy mangrove swamps.",
       "Deep granite canyons formed by continuous river erosion over centuries.",
       "Broad sand dunes shaped by heavy seasonal winds from the ocean."
     ],
-    "a": 1,
-    "exp": "<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Pertanyaan ini menanyakan ciri fisik daratan (terrestrial landscape) Raja Ampat berdasarkan paragraf pertama. Pada teks disebutkan: <i>\"The terrestrial landscape is characterized by dramatic, vegetation-covered limestone karst formations...\"</i> (Lansekap daratannya dicirikan oleh formasi karst batu kapur terjal yang tertutup vegetasi). Pilihan B mencerminkan fakta tersebut secara tepat."
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Pertanyaan ini menanyakan ciri fisik daratan (terrestrial landscape) Raja Ampat berdasarkan paragraf pertama. Pada Paragraf 1 Teks 1 disebutkan: <i>\"The terrestrial landscape is characterized by dramatic, vegetation-covered limestone karst formations that emerge steeply...\"</i> (Lansekap daratannya dicirikan oleh formasi karst batu kapur terjal yang tertutup vegetasi hijau). Pilihan B mencerminkan fakta tersebut secara tepat."
   },
   {
-    "q": "What is the primary purpose of the author in writing the second paragraph?",
-    "difficulty": "L2",
-    "opts": [
+    "type":"single","subtype":"single","difficulty":"L2","text":1,
+    "q":"What is the primary purpose of the author in writing the second paragraph?",
+    "opts":[
       "To explain how native communities manage international tourist accommodations.",
       "To criticize commercial overfishing activities conducted by foreign fleets.",
       "To describe environmental conservation strategies implemented in the area.",
       "To detail the transportation expenses required to travel between islands.",
       "To prove that mass tourism has negatively affected local indigenous cultures."
     ],
-    "a": 2,
-    "exp": "<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Tujuan utama paragraf kedua adalah menjelaskan strategi konservasi lingkungan yang diterapkan di area tersebut. Paragraf 2 membahas kerja sama masyarakat lokal dengan organisasi internasional untuk membentuk kawasan perlindungan laut (marine protected areas) dan mengelola ekowisata berkelanjutan."
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Tujuan utama paragraf kedua adalah menjelaskan strategi konservasi lingkungan yang diterapkan di area tersebut. Paragraf 2 membahas bagaimana masyarakat lokal bekerja sama dengan organisasi konservasi internasional untuk membentuk kawasan perlindungan laut (marine protected areas), mengatur penangkapan ikan komersial, serta memperluas ekowisata berkelanjutan."
   },
   {
-    "q": "What can be inferred regarding the relationship between Raja Ampat’s geographic location and its current ecological state?",
-    "difficulty": "L3",
-    "opts": [
+    "type":"single","subtype":"single","difficulty":"L3","text":1,
+    "q":"What can be inferred regarding the relationship between Raja Ampat’s geographic location and its current ecological state?",
+    "opts":[
       "Its proximity to major industrial centers accelerates its regional biodiversity loss.",
       "Its geographic isolation has acted as a natural barrier against heavy mass tourism.",
       "Its remote location makes environmental conservation policies impossible to enforce.",
       "Its geographic positioning makes it immune to the impacts of global climate change.",
       "Its isolated islands prevent local communities from engaging in sustainable eco-tourism."
     ],
-    "a": 1,
-    "exp": "<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Dapat disimpulkan (inferred) dari kalimat: <i>\"...this isolation has effectively protected the fragile ecosystem from the destructive impacts of mass tourism...\"</i> Terisolasi secara geografis berfungsi sebagai benteng alami yang melindungi ekosistem dari dampak buruk pariwisata massal."
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Dapat disimpulkan (inferred) dari kalimat: <i>\"Although its remote location presents logistical challenges... this isolation has effectively protected the ecosystem from the destructive impacts of mass tourism...\"</i> Terisolasi secara geografis berfungsi sebagai benteng alami yang melindungi ekosistem Raja Ampat dari dampak buruk pariwisata massal."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L3","text":1,
+    "q":"Based on the text, determine whether each of the following statements is TRUE or FALSE.\n\nStatement I: Raja Ampat holds the highest recorded marine biodiversity on Earth according to marine biologists.\nStatement II: Commercial overfishing in the region remains entirely unregulated by local and international bodies.\nStatement III: The ongoing scientific research in Raja Ampat continues to uncover previously unidentified species.",
+    "opts":["True, True, False","True, False, True","False, True, True","False, False, True","True, False, False"],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B (True, False, True)</b><br><br><b>Pembahasan:</b><br><ul><li><b>Pernyataan I (BENAR):</b> Paragraf 1 menyatakan biodiversitas laut Raja Ampat adalah yang tertinggi yang pernah dicatat oleh ahli biologi laut (<i>highest recorded on Earth</i>).</li><li><b>Pernyataan II (SALAH):</b> Paragraf 2 menyebutkan penangkapan ikan komersial diatur secara ketat (<i>strictly regulated</i>), bukan tanpa regulasi.</li><li><b>Pernyataan III (BENAR):</b> Paragraf 3 menyatakan ekspedisi ilmiah terus menemukan spesies baru yang sebelumnya belum teridentifikasi (<i>discover previously undescribed species</i>).</li></ul>"
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L2","text":1,
+    "q":"Match the paragraph number with its main topic focus:\n\n1. Paragraph 1 → (X) Ecological preservation strategies and sustainable community initiatives\n2. Paragraph 2 → (Y) Future scientific potential, research necessity, and overall significance\n3. Paragraph 3 → (Z) Geographic overview, physical landscape, and marine biodiversity",
+    "opts":["1-Z, 2-X, 3-Y","1-X, 2-Y, 3-Z","1-Y, 2-Z, 3-X","1-Z, 2-Y, 3-X","1-X, 2-Z, 3-Y"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (1-Z, 2-X, 3-Y)</b><br><br><b>Pembahasan:</b><br><ul><li><b>Paragraf 1 (Z):</b> Berisi gambaran umum geografis, lansekap fisik (batu kapur), dan keanekaragaman hayati laut.</li><li><b>Paragraf 2 (X):</b> Berisi strategi pelestarian ekologi dan inisiatif berbasis komunitas lokal.</li><li><b>Paragraf 3 (Y):</b> Berisi potensi riset ilmiah masa depan, pentingnya penelitian, serta signifikansi kawasan tersebut secara global.</li></ul>"
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":2,
+    "q":"Which of the following environmental features dominates the terrestrial area of Komodo National Park?",
+    "opts":[
+      "Tropical rainforests with high annual rainfall levels.",
+      "Dense mangrove swamps extending across inland regions.",
+      "Open grasslands paired with dry deciduous forest areas.",
+      "Alpine meadows located on high elevated mountain peaks.",
+      "Freshwater lakes surrounded by thick peat moss soil."
+    ],
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Di Paragraf 1 Teks 2 tertulis: <i>\"The terrestrial vegetation is dominated by open grassland and dry deciduous forests...\"</i> (Vegetasi daratannya didominasi oleh padang rumput terbuka dan hutan gugur kering)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":2,
+    "q":"What is the main idea of the second paragraph?",
+    "opts":[
+      "The historical establishment of UNESCO as an international conservation authority.",
+      "The evolutionary factors, global recognition, and management of the national park.",
+      "The financial conflicts between native residents and private tourism operators.",
+      "The complete elimination of environmental risks caused by global climate shifts.",
+      "The decline of foreign visitor numbers due to strict environmental regulation policies."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Paragraf kedua berfokus pada faktor evolusi yang membuat spesies prasejarah bertahan, pengakuan internasional melalui status UNESCO World Heritage Site, serta bagaimana kawasan tersebut dikelola dengan ekowisata."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L3","text":2,
+    "q":"Which of the following best describes the author’s tone when discussing the management of Komodo National Park?",
+    "opts":[
+      "Indifferent and dismissive regarding future conservation outcomes.",
+      "Skeptical and highly critical of international research efforts.",
+      "Objective and appreciative of balanced ecological preservation.",
+      "Alarmist and sensational concerning regional economic development.",
+      "Highly emotional and hostile toward sustainable tourism initiatives."
+    ],
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Nada (tone) penulis adalah objektif dan mengapresiasi upaya keseimbangan antara pembangunan ekonomi regional dengan pelestarian ekologi (<i>objective and appreciative of balanced ecological preservation</i>)."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L2","text":2,
+    "q":"Which of the following reasons explain why the park serves as an important site for scientific research? (Select TWO correct answers)",
+    "opts":[
+      "It allows scientists to study island biogeography and predator-prey dynamics.",
+      "It provides a controlled facility for breeding non-native marine animals.",
+      "It offers empirical data on how coral reefs respond to global thermal stress.",
+      "It proves that arid savannas cannot support endemic reptile populations.",
+      "It contains the largest artificial research laboratory built in Southeast Asia."
+    ],
+    "a":[0,2],
+    "exp":"<b>Jawaban Benar: A dan C</b><br><br><b>Pembahasan:</b><br>Berdasarkan Paragraf 3 Teks 2: <i>\"...studies conducted within the park provide valuable scientific insights into island biogeography, predator-prey dynamics (Opsi A), and the resilience of coral reef ecosystems facing global thermal stress (Opsi C).\"</i>"
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L3","text":2,
+    "q":"Reorder the following sentences to form a coherent summary paragraph of Text 2:\n\n1. Consequently, UNESCO designated the archipelago as a World Heritage Site to enhance protection.\n2. Komodo National Park was originally created to protect the endemic Komodo dragon population.\n3. However, balancing eco-tourism revenue with delicate habitat preservation remains an ongoing challenge.\n4. Its dry climate and geographic isolation allowed unique prehistoric species to survive undisturbed.",
+    "opts":["2 – 4 – 1 – 3","4 – 2 – 3 – 1","1 – 3 – 2 – 4","2 – 1 – 4 – 3","3 – 4 – 1 – 2"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (2 – 4 – 1 – 3)</b><br><br><b>Pembahasan:</b><br>Urutan logis menyusun ringkasan:<br>1. (2) Taman Nasional Komodo awalnya dibentuk untuk melindungi komodo.<br>2. (4) Iklim kering dan isolasi geografisnya memungkinkan spesies prasejarah bertahan.<br>3. (1) Oleh karena itu, UNESCO menetapkannya sebagai Situs Warisan Dunia.<br>4. (3) Namun, menyeimbangkan pendapatan ekowisata dengan pelestarian habitat tetap menjadi tantangan."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":3,
+    "q":"What raw materials were primarily used by the student team to construct their water filtration system?",
+    "opts":[
+      "Commercial synthetic filters and imported activated carbon sheets.",
+      "Recycled industrial metals and chemically treated river sand.",
+      "Recycled polymers and activated charcoal from agricultural waste.",
+      "Crushed granite stones and refined volcanic ash compounds.",
+      "Natural bamboo pipes and woven coconut fiber layers."
+    ],
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Di Paragraf 1 Teks 3 tercantum: <i>\"...a water filtration system using recycled polymers and activated charcoal derived from agricultural waste.\"</i> (polimer daur ulang dan arang aktif dari limbah pertanian)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":3,
+    "q":"What was the student team's primary motivation for participating in the competition?",
+    "opts":[
+      "To secure immediate commercial production contracts with international firms.",
+      "To present their innovative environmental research at a national science fair.",
+      "To criticize other regional schools for lacking advanced laboratory facilities.",
+      "To earn academic course credits required for high school graduation.",
+      "To win monetary prizes offered by national industrial sponsors."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Motivasi utama mereka adalah mempresentasikan/menampilkan riset inovasi lingkungan mereka di ajang pameran ilmiah tingkat nasional (National Youth Science Fair)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L3","text":3,
+    "q":"How did the team’s attitude change from the beginning of the evaluation process to the end of the event?",
+    "opts":[
+      "From absolute overconfidence to deep disappointment regarding their research.",
+      "From initial anxiety to confident validation of their hard work and dedication.",
+      "From complete indifference to intense anger toward the evaluation panel.",
+      "From enthusiasm to total confusion regarding environmental engineering concepts.",
+      "From calm assurance to extreme panic during the final award presentation."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Tim berawal dari merasa cemas (<i>experiencing significant anxiety</i> di Paragraf 1) kemudian berubah menjadi penuh percaya diri dan bangga setelah berhasil menjawab pertanyaan juri serta meraih Juara 3 (Paragraf 2 & 3)."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L1","text":3,
+    "q":"Based on paragraph 2, which actions did the team perform when the judges visited their station? (Select TWO correct options)",
+    "opts":[
+      "They demonstrated how their working prototype filtered heavy metal pollutants.",
+      "They requested the judges to recalculate their statistical experimental data.",
+      "They defended their theoretical framework and clarified practical applications.",
+      "They modified their prototype design using materials from other exhibitors.",
+      "They refused to answer technical questions regarding their methodology."
+    ],
+    "a":[0,2],
+    "exp":"<b>Jawaban Benar: A dan C</b><br><br><b>Pembahasan:</b><br>Di Paragraf 2 Teks 3 dijelaskan:<br>1. Opsi A: Mengisi demonstrasi penyaringan polutan logam berat (<i>demonstrated our working prototype... absorbed heavy metal pollutants</i>).<br>2. Opsi C: Mempertahankan kerangka teoritis dan menjelaskan aplikasi praktisnya (<i>defend our theoretical framework confidently and clarify the practical applications</i>)."
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L2","text":3,
+    "q":"Arrange the following events in the correct chronological order as described in the text:\n\n1. Receiving the third-place award during the formal closing ceremony.\n2. Conducting six months of intensive laboratory experiments before the event.\n3. Demonstrating the filtration prototype to the panel of academic judges.\n4. Setting up the interactive booth and calibrating analytical equipment.",
+    "opts":["2 – 4 – 3 – 1","4 – 2 – 1 – 3","2 – 3 – 4 – 1","1 – 4 – 3 – 2","3 – 2 – 4 – 1"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (2 – 4 – 3 – 1)</b><br><br><b>Pembahasan:</b><br>Urutan kronologis kejadian:<br>1. (2) Melakukan eksperimen laboratorium selama 6 bulan sebelum acara.<br>2. (4) Mempersiapkan stan pameran dan peralatan pada pagi hari pembukaan.<br>3. (3) Mendemonstrasikan purwarupa kepada dewan juri.<br>4. (1) Menerima penghargaan juara ketiga saat upacara penutupan."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":4,
+    "q":"In which city was the International Model United Nations Conference hosted?",
+    "opts":["Jakarta","Surabaya","Yogyakarta","Bandung","Bali"],
+    "a":[4],
+    "exp":"<b>Jawaban Benar: E (Bali)</b><br><br><b>Pembahasan:</b><br>Paragraf 1 Teks 4 menyebutkan secara langsung: <i>\"...held in Bali that brings together prospective student diplomats...\"</i>"
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":4,
+    "q":"What main challenge did the delegation face during the preliminary committee sessions?",
+    "opts":[
+      "Lack of familiarity with standard public speaking techniques.",
+      "Ideological resistance from foreign delegations of industrial economies.",
+      "Total failure of their electronic presentation equipment during debates.",
+      "Inability to submit their position paper before the conference deadline.",
+      "Disagreements among their own school team members regarding policy goals."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Tantangan utama pada sidang awal dicatat pada Paragraf 2: <i>\"Although we encountered significant ideological resistance from foreign delegations representing industrial economies...\"</i> (penolakan ideologis dari delegasi negara-negara industri)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L3","text":4,
+    "q":"Which statement best summarizes the long-term impact of the conference on the narrator?",
+    "opts":[
+      "It convinced the narrator to avoid future public speaking engagements entirely.",
+      "It shifted the narrator's academic focus toward environmental laboratory engineering.",
+      "It broadened their skills and inspired them to pursue studies in political science.",
+      "It proved that international diplomatic simulations lack practical educational value.",
+      "It demonstrated that economic development always takes priority over ecology."
+    ],
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Berdasarkan paragraf terakhir: Konferensi tersebut mengasah keterampilan diplomasi/public speaking dan menginspirasi penulis untuk melanjutkan studi perguruan tinggi di bidang ilmu politik (<i>political science</i>)."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L3","text":4,
+    "q":"Determine whether the following statements regarding the delegation's resolution proposal are TRUE or FALSE.\n\nStatement I: The proposal focused on binding agreements for single-use plastic reduction.\nStatement II: The general assembly voted against adopting the proposed resolution draft.\nStatement III: The team received the \"Best Position Paper\" award at the closing ceremony.",
+    "opts":["True, False, True","False, True, False","True, True, False","False, False, True","True, True, True"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (True, False, True)</b><br><br><b>Pembahasan:</b><br><ul><li><b>Statement I (BENAR):</b> Proposal berfokus pada kesepakatan mengikat pengurangan plastik sekali pakai (<i>binding international agreements on single-use plastic reduction</i>).</li><li><b>Statement II (SALAH):</b> Majelis umum memilih untuk MENERIMA (adopting) draf, bukan menolaknya.</li><li><b>Statement III (BENAR):</b> Tim mendapatkan penghargaan \"Best Position Paper\" saat acara penutupan.</li></ul>"
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L3","text":4,
+    "q":"Match the actions taken by the delegation with their corresponding outcome:\n\n1. Conducting months of pre-conference research → (X) Successfully passing the final draft in the assembly\n2. Employing diplomatic negotiation tactics → (Y) Thorough preparation for complex committee debates\n3. Collaborating with diverse foreign delegates → (Z) Overcoming resistance from industrial nations",
+    "opts":["1-Y, 2-Z, 3-X","1-X, 2-Y, 3-Z","1-Z, 2-X, 3-Y","1-Y, 2-X, 3-Z","1-Z, 2-Y, 3-X"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (1-Y, 2-Z, 3-X)</b><br><br><b>Pembahasan:</b><br><ul><li><b>1-Y:</b> Melakukan riset berbulan-bulan berakibat pada persiapan matang untuk debat komite.</li><li><b>2-Z:</b> Menerapkan taktik negosiasi diplomatis membantu mengatasi penolakan dari negara industri.</li><li><b>3-X:</b> Bekerja sama dengan delegasi asing membuahkan hasil lolosnya draf resolusi akhir.</li></ul>"
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":5,
+    "q":"What physical characteristic allowed the ancient banyan tree to remain green during the severe drought?",
+    "opts":[
+      "Thick waxy leaves that completely prevented water evaporation.",
+      "Deep underground roots that accessed permanent groundwater reserves.",
+      "Large hollow trunk chambers that stored rainwater from previous seasons.",
+      "Dense surface roots that absorbed humidity directly from night air.",
+      "Symbiotic relationships with local animals that supplied continuous moisture."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Di Paragraf 2 Teks 5 dijelaskan bahwa akar pohon beringin tua menusuk jauh ke dalam lapisan tanah sehingga bisa mengakses cadangan air tanah permanen (<i>subterranean root system had extended deep... to access permanent groundwater reserves</i>)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":5,
+    "q":"What is the central moral theme conveyed through the narrative?",
+    "opts":[
+      "Immediate panic is natural and necessary when responding to environmental catastrophes.",
+      "Physical strength is more valuable than intellectual foresight during survival situations.",
+      "Strategic foresight, patience, and collective action are essential to overcome crises.",
+      "Older community members should handle all physical work during emergency events.",
+      "Natural ecosystems will always restore themselves without animal intervention."
+    ],
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Pesan moral cerita ini dinyatakan di paragraf terakhir: Pandangan jauh ke depan (strategic foresight), kesabaran, serta kerja sama komunitas (collective action) sangat krusial untuk mengatasi krisis."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L3","text":5,
+    "q":"How did Alan persuade the skeptical forest animals to begin the excavation project?",
+    "opts":[
+      "By threatening to exclude uncooperative animals from accessing future food sources.",
+      "By demonstrating his superior physical digging skills at the banyan base.",
+      "By using logical argumentation and demonstrating unwavering determination.",
+      "By claiming that the ancient banyan tree had ordered them to dig immediately.",
+      "By promising that external water sources would arrive from neighboring valleys."
+    ],
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Alan membujuk hewan-hewan lain yang ragu menggunakan argumen yang logis serta tekad yang tak tergoyahkan (<i>Alan’s persuasive argument and unwavering determination</i>) sebagaimana tertulis di Paragraf 2."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L2","text":5,
+    "q":"Which animal behaviors in the story contributed directly to resolving the water crisis? (Select TWO options)",
+    "opts":[
+      "Alan observing the banyan tree and seeking wisdom from it.",
+      "The animals migrating to neighboring valleys in search of rain.",
+      "The animal community pooling their physical labor to dig through the night.",
+      "The creatures waiting patiently for seasonal weather patterns to change.",
+      "The animals clearing the surrounding forest canopy to reduce heat."
+    ],
+    "a":[0,2],
+    "exp":"<b>Jawaban Benar: A dan C</b><br><br><b>Pembahasan:</b><br>Tindakan yang menyelesaikan krisis:<br>1. (A) Alan mengamati pohon beringin dan menanyakan rahasianya (mencari pemecahan masalah).<br>2. (C) Seluruh hewan menyatukan tenaga untuk menggali tanah bersama-sama sepanjang malam sampai menemukan sumber air."
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L3","text":5,
+    "q":"Order the narrative plot progression sequentially:\n\n1. Alan learns about the deep root system accessing underground water.\n2. A severe drought causes the valley's primary river to dry up completely.\n3. The animals dig through soil layers to release a subterranean aquifer.\n4. Alan gathers the animal community and proposes an excavation plan.",
+    "opts":["2 – 1 – 4 – 3","1 – 2 – 3 – 4","4 – 3 – 2 – 1","2 – 4 – 1 – 3","3 – 1 – 4 – 2"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (2 – 1 – 4 – 3)</b><br><br><b>Pembahasan:</b><br>Urutan alur cerita (plot):<br>1. (2) Kekeringan hebat melanda hingga sungai mengering.<br>2. (1) Alan mengetahui rahasia akar pohon beringin yang mencapai air tanah.<br>3. (4) Alan mengumpulkan warga hutan dan mengusulkan rencana penggalian.<br>4. (3) Hewan-hewan menggali tanah hingga memancarkan air."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":6,
+    "q":"What structural damage did the watchtower suffer during the severe autumn hurricane?",
+    "opts":[
+      "The upper glass dome shattered completely due to violent gale winds.",
+      "Massive ocean waves fractured the lower masonry of the stone tower.",
+      "The wooden roof structure caught fire due to a lightning strike.",
+      "The central staircase collapsed entirely, trapping the keepers inside.",
+      "The iron beacon housing rusted and detached from the outer wall."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Di Paragraf 1 Teks 6 disebutkan: <i>\"...causing massive waves to fracture the lower masonry of the tower...\"</i> (Gelombang laut besar retakkan pondasi batu bagian bawah mercusuar)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":6,
+    "q":"Why did Master Samuel refuse Thomas's suggestion to abandon the watchtower?",
+    "opts":[
+      "He feared losing his monthly salary if the tower was damaged.",
+      "He knew that vessels navigating offshore reefs depended on the light.",
+      "He believed the hurricane would subside within a few minutes.",
+      "He wanted to prove his physical strength to the local community.",
+      "He was unable to walk down the stone staircase due to injury."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Samuel menolak pergi karena tahu kapal-kapal yang sedang berlayar mengarungi karang berbahaya sangat bergantung pada cahaya mercusuar tersebut agar tidak karam (Paragraf 2)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L3","text":6,
+    "q":"What does the contrast between Master Samuel and Thomas reveal during the crisis?",
+    "opts":[
+      "Thomas possessed greater practical technical skills than Master Samuel.",
+      "Master Samuel prioritized personal survival over professional obligations.",
+      "Samuel demonstrated calm composure and duty, while Thomas initially panicked.",
+      "Both characters showed equal reluctance to transport the backup fuel reserves.",
+      "Thomas was more experienced in predicting long-term weather patterns."
+    ],
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Perbedaan karakter memperlihatkan bahwa Samuel tetap tenang dan menjunjung tinggi tugas integritasnya, sedangkan Thomas pada awalnya panik dan meminta melarikan diri (Paragraf 2)."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L3","text":6,
+    "q":"Which statements correctly reflect the outcome of the keepers' actions? (Select TWO options)",
+    "opts":[
+      "The mechanical fuel pumps were successfully repaired during the night.",
+      "Multiple fishing vessels collided with offshore reefs due to light failure.",
+      "Local fishing boats safely anchored near the bay after navigating the storm.",
+      "The watchtower collapsed into the ocean right after the storm ended.",
+      "Thomas abandoned Master Samuel and fled to the nearest village."
+    ],
+    "a":[0,2],
+    "exp":"<b>Jawaban Benar: A dan C</b><br><br><b>Pembahasan:</b><br>Hasil akhir dari tindakan mereka (Paragraf 3):<br>1. (A) Pompa bahan bakar berhasil diperbaiki malam itu (<i>repaired the mechanical feed system</i>).<br>2. (C) Kapal-kapal nelayan lokal berhasil berlabuh dengan selamat (<i>local fishing vessels safely anchored near the bay</i>)."
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L2","text":6,
+    "q":"Match the character/element with their symbolic role in the story:\n\n1. Master Samuel → (X) Vulnerability and initial panic in the face of danger\n2. Thomas → (Y) Guidance, safety, and continuity for the community\n3. The Coastal Beacon → (Z) Steadfast duty, composure, and vocational leadership",
+    "opts":["1-Z, 2-X, 3-Y","1-X, 2-Y, 3-Z","1-Y, 2-Z, 3-X","1-Z, 2-Y, 3-X","1-X, 2-Z, 3-Y"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (1-Z, 2-X, 3-Y)</b><br><br><b>Pembahasan:</b><br>Simbolisme peran:<br><ul><li><b>1-Z:</b> Master Samuel menyimbolkan keteguhan tugas, ketenangan, dan kepemimpinan.</li><li><b>2-X:</b> Thomas menyimbolkan kerentanan dan kepanikan awal saat krisis.</li><li><b>3-Y:</b> Lampu Mercusuar menyimbolkan petunjuk arah, keselamatan, dan keberlanjutan hidup warga.</li></ul>"
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":7,
+    "q":"What is the recommended capacity for the plastic container used in this composting process?",
+    "opts":[
+      "Exactly ten liters",
+      "At least fifty liters",
+      "Up to one hundred liters",
+      "Less than five liters",
+      "Around twenty-five liters"
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Langkah 1 teks pembuatan kompos menyebutkan: <i>\"Acquire a durable, heavy-duty plastic container with a capacity of at least fifty liters...\"</i> (kapasitas minimal 50 liter)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":7,
+    "q":"What is the author's primary objective in providing these guidelines?",
+    "opts":[
+      "To encourage readers to sell organic fertilizers to commercial farms.",
+      "To instruct readers on building an eco-friendly home composting system.",
+      "To explain how municipal landfills process non-organic industrial waste.",
+      "To detail chemical formulas used in commercial agriculture production.",
+      "To warn home gardeners against using organic kitchen waste as fertilizer."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Tujuan utama penulisan petunjuk ini adalah untuk memberi panduan/instruksi praktis cara membuat sistem kompos rumahan yang ramah lingkungan."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L3","text":7,
+    "q":"Why is it necessary to maintain a three-to-one volumetric ratio between brown and green materials?",
+    "opts":[
+      "To increase the total physical weight of the composting container quickly.",
+      "To maintain chemical balance, prevent bad odors, and optimize decomposition.",
+      "To prevent water from draining out through the drilled ventilation holes.",
+      "To ensure that earthworms can enter the container from the outside soil.",
+      "To keep the internal temperature of the container completely cold."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Berdasarkan Langkah 4 Teks 7: Perbandingan 3:1 antara bahan cokelat (karbon) dan hijau (nitrogen) diperlukan untuk menjaga keseimbangan kimia, mencegah bau busuk, serta mengoptimalkan penguraian."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L1","text":7,
+    "q":"Which of the following items are explicitly categorized as green materials in the text? (Select TWO options)",
+    "opts":[
+      "Shredded unbleached cardboard",
+      "Raw vegetable trimmings",
+      "Coarse dry twigs",
+      "Spent coffee grounds",
+      "Dried garden leaves"
+    ],
+    "a":[1,3],
+    "exp":"<b>Jawaban Benar: B dan D</b><br><br><b>Pembahasan:</b><br>Langkah 3 mengategorikan bahan hijau (nitrogen-rich green materials) meliputi: potongan sayur mentah (<i>raw vegetable trimmings</i> - B) dan ampas kopi (<i>spent coffee grounds</i> - D)."
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L2","text":7,
+    "q":"Match the action in composting with its specific technical purpose:\n\n1. Drilling air holes along container walls → (X) Introduce oxygen throughout core substrate\n2. Adding dry leaves and twigs at bottom → (Y) Ensure optimal aerobic decomposition and drainage\n3. Turning the compost mass weekly → (Z) Promote baseline aeration and absorb liquid runoff",
+    "opts":["1-Y, 2-Z, 3-X","1-X, 2-Y, 3-Z","1-Z, 2-X, 3-Y","1-Y, 2-X, 3-Z","1-Z, 2-Y, 3-X"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (1-Y, 2-Z, 3-X)</b><br><br><b>Pembahasan:</b><br>Fungsi teknis tindakan pembuatan kompos:<br><ul><li><b>1-Y:</b> Menjelaskan pelubangan dinding wadah bertujuan menjamin aliran udara (aerobik) dan drainase.</li><li><b>2-Z:</b> Menaruh ranting/daun kering di dasar wadah menciptakan aerasi dasar dan menyerap cairan.</li><li><b>3-X:</b> Membalik tumpukan kompos setiap minggu berguna menyalurkan oksigen ke bagian dalam tumpukan.</li></ul>"
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":8,
+    "q":"According to Step 1, which sections of the paper should be read during the initial preliminary reading?",
+    "opts":[
+      "The methodology and statistical analysis sections only.",
+      "The abstract, introduction, and conclusion sections.",
+      "The complete list of academic references and citations.",
+      "The empirical data tables and visual charts exclusively.",
+      "The author biography and institutional acknowledgments."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Langkah 1 Teks 8 menyatakan secara spesifik: <i>\"Conduct an initial preliminary reading of the abstract, introduction, and conclusion sections...\"</i>"
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":8,
+    "q":"What is the overall purpose of conducting a systematic research paper review?",
+    "opts":[
+      "To memorize all technical data points presented in scientific publications.",
+      "To evaluate theoretical arguments, methodology, and empirical evidence.",
+      "To rewrite the original paper using simpler conversational vocabulary.",
+      "To criticize academic authors for publishing complex research topics.",
+      "To copy research methodologies for personal uncredited assignments."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Tujuan review jurnal ilmiah tertulis di kalimat awal: <i>\"...enables students to evaluate theoretical arguments, methodology, and empirical evidence effectively.\"</i> (Mengevaluasi argumen teori, metodologi, dan bukti empiris)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L3","text":8,
+    "q":"What would likely happen if a reviewer skipped analyzing the methodology section?",
+    "opts":[
+      "The reviewer would be unable to evaluate if the research design and sample size are valid.",
+      "The review paper would automatically be accepted by peer-reviewed academic journals.",
+      "The statistical tables would become easier to interpret without methodological context.",
+      "The author's personal biases would become completely irrelevant to the study's outcome.",
+      "The overall reading time of the research paper would double significantly."
+    ],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A</b><br><br><b>Pembahasan:</b><br>Jika peninjau melewatkan bagian metodologi (Langkah 3), peninjau tidak akan mampu menilai apakah desain penelitian, instrumen, dan ukuran sampel yang digunakan valid atau sesuai."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L3","text":8,
+    "q":"Determine whether the following review guidelines are TRUE or FALSE based on the text.\n\nStatement I: Scrutinizing visual data representations ensures they align logically with written claims.\nStatement II: Unfamiliar domain-specific terms should be ignored during the second reading.\nStatement III: The final review must maintain an objective tone and include precise academic citations.",
+    "opts":["True, False, True","False, True, False","True, True, False","False, False, True","True, True, True"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (True, False, True)</b><br><br><b>Pembahasan:</b><br><ul><li><b>Statement I (BENAR):</b> Memeriksa grafik data (Langkah 4) memastikan kesesuaian antara data visual denganklaim tulisan.</li><li><b>Statement II (SALAH):</b> Istilah asing justru harus dicatat dan diklarifikasi (Langkah 2), bukan diabaikan.</li><li><b>Statement III (BENAR):</b> Ulasan akhir harus berlarut dalam nada objektif dan menyertakan sitasi ilmiah (Langkah 7).</li></ul>"
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L3","text":8,
+    "q":"Order the initial four steps of the research paper review process sequentially:\n\n1. Analyze the methodology section for appropriate design and analytical tools.\n2. Perform a second reading while highlighting arguments and domain terminology.\n3. Scrutinize empirical data tables and graphs to verify written interpretations.\n4. Conduct a preliminary reading of the abstract, introduction, and conclusion.",
+    "opts":["4 – 2 – 1 – 3","2 – 4 – 3 – 1","1 – 3 – 2 – 4","4 – 1 – 2 – 3","3 – 2 – 4 – 1"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (4 – 2 – 1 – 3)</b><br><br><b>Pembahasan:</b><br>Urutan langkah awal 1 sampai 4:<br>1. (4) Membaca awal bagian abstrak, pendahuluan, dan kesimpulan.<br>2. (2) Membaca kedua kali sambil menandai argumen dan istilah khusus.<br>3. (1) Menganalisis bagian metodologi penelitian.<br>4. (3) Memeriksa tabel dan grafik data empiris."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":9,
+    "q":"What modern economic factors have exposed teenagers to complex financial decisions earlier than before?",
+    "opts":[
+      "The decline of physical cash usage in traditional local markets.",
+      "The rapid growth of digital banking services and online shopping platforms.",
+      "The introduction of mandatory financial tax laws for high school students.",
+      "The complete elimination of physical currency by government banks.",
+      "The increasing cost of physical textbooks in secondary educational institutions."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Paragraf 1 Teks 9 menyebutkan: Pesatnya pertumbuhan perbankan digital dan e-commerce membuat remaja dihadapkan pada transaksi keuangan rumit sejak usia dini."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":9,
+    "q":"What is the main thesis presented by the author in the first paragraph?",
+    "opts":[
+      "Digital banking platforms should be restricted for users under twenty-one years old.",
+      "Financial literacy is an essential competency that must be integrated into secondary curricula.",
+      "Teenagers should avoid making independent financial decisions until completing university.",
+      "High schools ought to replace academic subjects with practical vocational training.",
+      "Consumer debt accumulation is an unavoidable part of transitioning into adulthood."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Gagasan utama/tesis penulis di paragraf 1 adalah: Literasi keuangan merupakan kompetensi penting yang wajib diintegrasikan ke dalam kurikulum sekolah menengah."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L3","text":9,
+    "q":"How does learning about compound interest early benefit young individuals according to paragraph 3?",
+    "opts":[
+      "It guarantees immediate employment opportunities in commercial investment banks.",
+      "It allows money to grow significantly over time, securing long-term capital reserves.",
+      "It eliminates all future housing and university tuition expenses entirely.",
+      "It prevents digital banking applications from collecting personal user data.",
+      "It encourages adolescents to take out high-risk consumer loans during school."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Paragraf 2 (alasan kedua) menyebutkan: Memahami bunga berbunga (compound interest) sejak dini memungkinkan uang bertumbuh signifikan seiring waktu sehingga mengamankan cadangan modal jangka panjang."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L2","text":9,
+    "q":"According to the text, what are the primary consequences for teens who lack financial training? (Select TWO options)",
+    "opts":[
+      "They are statistically more prone to falling for predatory lending schemes.",
+      "They are banned from opening digital banking accounts as legal adults.",
+      "They experience long-term economic instability during their adult lives.",
+      "They are unable to pursue higher education degrees in humanities.",
+      "They cause immediate failure within national public banking systems."
+    ],
+    "a":[0,2],
+    "exp":"<b>Jawaban Benar: A dan C</b><br><br><b>Pembahasan:</b><br>Berdasarkan Paragraf 3 Teks 9, remaja yang minim edukasi keuangan:<br>1. (A) Secara statistik lebih rentan terjebak pinjaman terlarang/predatori (<i>predatory lending schemes</i>).<br>2. (C) Berisiko mengalami ketidakstabilan ekonomi jangka panjang saat dewasa."
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L3","text":9,
+    "q":"Match the financial literacy component with its corresponding practical benefit:\n\n1. Expense tracking and budgeting → (X) Securing substantial capital reserves through compounding growth\n2. Compound interest comprehension → (Y) Enhancing autonomy when handling lease or university costs\n3. Practical money management exposure → (Z) Mitigating impulse spending and consumer debt accumulation",
+    "opts":["1-Z, 2-X, 3-Y","1-X, 2-Y, 3-Z","1-Y, 2-Z, 3-X","1-Z, 2-Y, 3-X","1-X, 2-Z, 3-Y"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (1-Z, 2-X, 3-Y)</b><br><br><b>Pembahasan:</b><br>Pasangan komponen dan manfaatnya:<br><ul><li><b>1-Z:</b> Pencatatan pengeluaran & anggaran mengurangi belanja impulsif dan utang konsumtif.</li><li><b>2-X:</b> Pemahaman bunga berbunga mengamankan pertumbuhan modal jangka panjang.</li><li><b>3-Y:</b> Pengalaman mengelola uang meningkatkan kemandirian saat di bangku kuliah atau menyewa tempat tinggal.</li></ul>"
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L1","text":10,
+    "q":"What specific risk is associated with the continuous collection of student data by educational software?",
+    "opts":[
+      "Automatic failure of academic assignments due to software errors.",
+      "Exposure of sensitive data to commercial exploitation or unauthorized breaches.",
+      "Immediate permanent deletion of student personal identity records.",
+      "Rapid decrease in computer processing speeds across school networks.",
+      "Inability of software developers to update educational program features."
+    ],
+    "a":[1],
+    "exp":"<b>Jawaban Benar: B</b><br><br><b>Pembahasan:</b><br>Paragraf 2 Teks 10 menjelaskan risiko pengumpulan data siswa adalah ancaman eksploitasi komersial serta kebocoran data pribadi (<i>vulnerable to commercial exploitation or unauthorized data breaches</i>)."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L2","text":10,
+    "q":"What argument does the author make in paragraph 3 regarding algorithmic systems?",
+    "opts":[
+      "Algorithmic systems always provide completely fair assessment metrics for all students.",
+      "Automated platforms should handle all grading tasks to eliminate teacher workloads.",
+      "Historical biases in training data can lead to discriminatory academic outcomes.",
+      "AI technologies are too expensive to be integrated into public school systems.",
+      "Educational algorithms prevent socioeconomic inequalities among student groups."
+    ],
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Paragraf 3 Teks 10 menegaskan bahwa bias historis pada data pelatihan AI dapat menyebabkan hasil penilaian akademis yang diskriminatif terhadap kelompok siswa tertentu."
+  },
+  {
+    "type":"single","subtype":"single","difficulty":"L3","text":10,
+    "q":"What overall attitude does the author express toward the integration of AI in education?",
+    "opts":[
+      "Completely dismissive, advocating for an immediate global ban on educational tech.",
+      "Uncritically enthusiastic, recommending total replacement of human teachers.",
+      "Cautiously balanced, supporting AI's benefits provided ethical regulations are enforced.",
+      "Highly fearful, predicting the eventual destruction of public educational institutions.",
+      "Thoroughly indifferent, claiming AI has no measurable impact on student learning."
+    ],
+    "a":[2],
+    "exp":"<b>Jawaban Benar: C</b><br><br><b>Pembahasan:</b><br>Sikap penulis bersifat seimbang dan berhati-hati (<i>cautiously balanced</i>). Penulis mengakui potensi positif AI sekaligus menekankan pentingnya regulasi etis untuk meminimalisir risikonya."
+  },
+  {
+    "type":"single","subtype":"complex","difficulty":"L3","text":10,
+    "q":"Which statements support the author's call for ethical AI regulation in schools? (Select TWO options)",
+    "opts":[
+      "Over-reliance on generative platforms can diminish students' critical thinking skills.",
+      "AI platforms eliminate the need for student privacy protection policies.",
+      "Unregulated data collection threatens student privacy rights in digital environments.",
+      "Automated tools ensure that all students receive identical learning materials.",
+      "AI tools automatically fix historical biases without human intervention."
+    ],
+    "a":[0,2],
+    "exp":"<b>Jawaban Benar: A dan C</b><br><br><b>Pembahasan:</b><br>Dua alasan yang mendukung regulasi AI etis di sekolah:<br>1. (A) Ketergantungan berlebih pada AI dapat menurunkan kemampuan berpikir kritis siswa (Paragraf 2).<br>2. (C) Pengumpulan data tanpa regulasi mengancam hak privasi siswa (Paragraf 2)."
+  },
+  {
+    "type":"single","subtype":"matching","difficulty":"L2","text":10,
+    "q":"Reorder the following sentences to form a logical summary of Text 10:\n\n1. Furthermore, unmonitored software can compromise student data privacy and perpetuate biases.\n2. Therefore, educational leaders must establish clear ethical guidelines and policy oversight.\n3. While AI tools offer personalized learning, they present serious ethical concerns in education.\n4. Excessive reliance on these automated tools also risks weakening critical cognitive development.",
+    "opts":["3 – 1 – 4 – 2","1 – 3 – 2 – 4","2 – 4 – 1 – 3","3 – 4 – 1 – 2","4 – 1 – 3 – 2"],
+    "a":[0],
+    "exp":"<b>Jawaban Benar: A (3 – 1 – 4 – 2)</b><br><br><b>Pembahasan:</b><br>Urutan logis ringkasan Teks 10:<br>1. (3) Meskipun AI memberikan pembelajaran personal, ia membawa kekhawatiran etis.<br>2. (1) Selain itu, perangkat lunak tanpa pengawasan dapat mengancam privasi data dan melanggengkan bias.<br>3. (4) Ketergantungan berlebih juga berisiko melemahkan perkembangan kognitif kritis.<br>4. (2) Oleh sebab itu, pemangku kebijakan harus membuat panduan etika dan pengawasan yang jelas."
   }
 ];
 
-let userAnswers = {};
-let synth = window.speechSynthesis;
-let currentUtterance = null;
+const texts = {
+  "1":{"title":"TEXT 1 — Raja Ampat Islands","body":"Situated off the northwest tip of the Bird’s Head Peninsula on the island of New Guinea, the Raja Ampat Archipelago represents one of the most ecologically significant marine ecosystems on the planet. Comprising over 1,500 small islands, cays, and shoals, this pristine territory is globally celebrated for its unmatched biodiversity, which marine biologists consider the highest recorded on Earth. The terrestrial landscape is characterized by dramatic, vegetation-covered limestone karst formations that emerge steeply from crystal-clear, turquoise ocean waters, creating a unique geographic phenomenon that attracts researchers and environmentalists alike. Beneath the surface, complex coral reef systems thrive alongside thousands of specialized marine species, establishing a crucial sanctuary for endangered turtles and rare marine mammals.\n\nAlthough its remote location presents logistical challenges for travelers, who must rely on specialized boat transport to navigate the island chain, this isolation has effectively protected the ecosystem from the destructive impacts of mass tourism and industrial development. In recent years, local indigenous communities have actively collaborated with international conservation organizations to establish marine protected areas, thereby ensuring that commercial fishing operations remain strictly regulated while sustainable eco-tourism initiatives are expanded. Consequently, these environmental strategies not only generate sustainable economic revenue for native residents, but they also foster long-term stewardship over natural resources that are increasingly threatened by global climate change.\n\nFurthermore, ongoing scientific expeditions in Raja Ampat continue to discover previously undescribed species, which highlights the critical necessity of preserving these delicate habitats from environmental degradation. Exploring the hidden lagoons and subterranean limestone caves offers scientists invaluable insights into marine evolutionary biology, whereas eco-tourists gain a profound appreciation for ecological conservation. As global awareness regarding environmental sustainability grows, the administration of Raja Ampat serves as a benchmark model for balancing human economic development with ecological preservation. Ultimately, the survival of this ecological treasure depends on continuous global cooperation, rigorous policy enforcement, and community-driven initiatives that prioritize environmental integrity over short-term financial gains."},
+  "2":{"title":"TEXT 2 — Komodo National Park","body":"Nestled within the Lesser Sunda Islands of Indonesia, Komodo National Park encompasses a unique terrestrial and marine sanctuary renowned for its exceptional biodiversity and distinct ecological significance. Established primarily to safeguard the endemic Komodo dragon, the world's largest living lizard species, the park includes three major islands—Komodo, Rinca, and Padar—alongside numerous smaller islets characterized by rugged topography, arid savannas, and dramatic coastal landscapes. The terrestrial vegetation is dominated by open grassland and dry deciduous forests, creating a stark visual contrast against the surrounding turquoise marine waters. Beneath the ocean surface, the park hosts extraordinarily rich coral reef systems driven by strong tidal currents, which support diverse marine organisms ranging from endangered sea turtles to manta rays and cetaceans.\n\nThe geographic isolation and dry climate of the archipelago have fostered an evolutionary environment where prehistoric species could survive with minimal anthropogenic disturbance over centuries. Recognizing its global importance, UNESCO designated the area as a World Heritage Site, which significantly elevated international research interest and conservation efforts. In recent years, sustainable eco-tourism initiatives have been introduced to balance regional economic development with environmental protection, ensuring that local indigenous communities benefit directly from conservation frameworks. However, increasing visitor numbers and climate-induced environmental shifts pose ongoing challenges to the management of these delicate habitats, necessitating rigorous policy enforcement and active monitoring by environmental scientists.\n\nFurthermore, interdisciplinary studies conducted within the park provide valuable scientific insights into island biogeography, predator-prey dynamics, and the resilience of coral reef ecosystems facing global thermal stress. Exploring the dry valleys and hidden coves allows researchers to gather crucial empirical data regarding wildlife populations and habitat degradation. As global environmental pressure intensifies, the management model implemented at Komodo National Park serves as a critical reference for international biodiversity preservation. Ultimately, sustaining the structural integrity of this extraordinary ecosystem requires persistent international cooperation, community engagement, and scientific research aimed at preserving its ecological heritage for future generations."},
+  "3":{"title":"TEXT 3 — My First Scientific Exhibition","body":"Last academic term, my high school delegation was selected to participate in the prestigious National Youth Science Fair, an annual event hosted in Jakarta that showcases ground-breaking research initiatives developed by prospective young scientists. For six intensive months, our team had conducted rigorous laboratory experiments to design an affordable, highly efficient water filtration system using recycled polymers and activated charcoal derived from agricultural waste. On the opening morning of the exhibition, we arrived early at the venue to arrange our interactive demonstration booth, construct visual data charts, and calibrate our analytical equipment, despite experiencing significant anxiety regarding the upcoming evaluation by the panel of academic judges.\n\nWhen the senior evaluators finally approached our station, we systematically demonstrated our working prototype and articulated our methodology, explaining how the synthesized charcoal successfully absorbed heavy metal pollutants from contaminated water samples. Although the judges subjected our findings to intense critical inquiry, our comprehensive preparation enabled us to defend our theoretical framework confidently and clarify the practical applications of our innovation. Throughout the subsequent days of the fair, hundreds of visitors, academic scholars, and peer researchers visited our exhibit, offering valuable technical feedback that expanded our understanding of environmental engineering principles.\n\nBeyond presenting our own research, the event provided an exceptional opportunity to engage with innovative projects created by students from diverse regional backgrounds, which broadened our perspective on contemporary scientific challenges. At the formal closing ceremony on Sunday afternoon, our sustained dedication was officially recognized when our research project received the third-place award in the environmental technology division. Accepting the honor on stage was an unforgettable milestone that validated our months of persistent effort, reinforced our commitment to scientific inquiry, and inspired our team to pursue advanced academic studies in sustainable technologies."},
+  "4":{"title":"TEXT 4 — Participating in the International Model United Nations Conference","body":"During the previous academic semester, I had the privilege of representing my high school delegation at the International Model United Nations Conference, a prestigious academic simulation held in Bali that brings together prospective student diplomats from across the region. For several months preceding the convention, our team engaged in extensive research regarding global diplomatic protocols, international policy frameworks, and economic sustainability metrics to prepare for complex committee debates. Upon arriving at the conference venue on the opening morning, we were assigned to simulate the Environmental Committee, where our primary objective was to draft comprehensive resolution proposals addressing global plastic pollution and sustainable waste management.\n\nDuring the preliminary committee sessions, we presented our position paper, which advocated for binding international agreements on single-use plastic reduction and technology transfer to developing nations. Although we encountered significant ideological resistance from foreign delegations representing industrial economies, we systematically employed diplomatic negotiation tactics and logical argumentation to build coalitions and modify our draft resolutions. Throughout the grueling three-day negotiations, our team collaborated continuously with delegates from diverse regional backgrounds, navigating complex geopolitical interests while maintaining the core principles of our policy framework.\n\nOn the final afternoon of the conference, the general assembly officially voted to adopt our proposed resolution draft, marking a major milestone after days of intense intellectual discourse. At the formal closing ceremony, our delegation was honored with the \"Best Position Paper\" award, an achievement that validated our exhaustive months of academic preparation and critical analytical work. Participating in this rigorous conference not only expanded our comprehension of international relations and environmental policy, but it also cultivated our public speaking and cross-cultural negotiation skills. Ultimately, the experience profoundly transformed my academic aspirations, inspiring me to pursue advanced university studies in political science and international public policy."},
+  "5":{"title":"TEXT 5 — The Lesson of the Old Banyan","body":"Deep within an isolated valley stood an ancient banyan tree, whose massive canopy had offered shelter to diverse wildlife populations for generations. One extraordinarily arid summer, an unprecedented drought struck the entire region, causing the primary river system to desiccate completely and leaving the forest inhabitants in a state of severe distress. As panic escalated among the animal communities, a young deer named Alan observed that the ancient banyan maintained its vibrant green foliage despite the scorching environmental conditions. Driven by a desire to preserve his community, Alan approached the formidable tree and respectfully inquired how it continued to flourish while the surrounding ecosystem was collapsing.\n\nThe ancient tree gently explained that over decades of environmental fluctuations, its subterranean root system had extended deep into the earth's geological strata, allowing it to access permanent groundwater reserves that remained unaffected by seasonal weather patterns. Understanding that immediate survival required strategic collective action rather than panic, Alan promptly assembled the forest inhabitants and proposed an ambitious excavation initiative near the base of the banyan tree. Although many animals were initially skeptical about the existence of subterranean water, Alan’s persuasive argument and unwavering determination convinced them to pool their physical efforts toward the excavation project.\n\nWorking cohesively through the night, the animals systematically removed layers of hardened soil until they eventually pierced a subterranean aquifer, which released a continuous supply of clean, refreshing water. This sudden hydro-resource saved the forest ecosystem from impending devastation and established a permanent sanctuary for vulnerable species during extreme climatic events. From that transformative period onward, the community recognized that long-term foresight and structural preparation are far more effective than immediate panic when facing systemic crises. The narrative of the banyan tree became a enduring lesson passed through generations, emphasizing that resilience requires deep preparation and unified community action."},
+  "6":{"title":"TEXT 6 — The Keeper of the Coastal Watchtower","body":"High atop a windswept cliff overlooking an unpredictable ocean stood an ancient stone watchtower, where an aging lighthouse keeper named Master Samuel maintained the coastal beacon for decades. The surrounding maritime community relied heavily on the consistent illumination provided by the tower, as navigating the treacherous offshore reefs required precise orientation, particularly during severe atmospheric storms. One dark autumn night, an unprecedented hurricane battered the coastline, causing massive waves to fracture the lower masonry of the tower and threatening to extinguish the central light source entirely.\n\nAs seawater flooded the ground floor and damaged the mechanical fuel pumps, Master Samuel’s young apprentice, Thomas, panicked and urged his mentor to abandon the unstable structure before it collapsed into the ocean. However, Samuel calmly explained that abandoning their post would inevitably lead to tragic maritime disasters for fishing vessels currently navigating the storm toward the harbor. Guided by a profound sense of vocational duty and resilience, Samuel instructed Thomas to help him transport backup fuel reserves manually up the winding stone staircase, despite the structural tremors shaking the entire foundation.\n\nWorking tirelessly through the night in perilous conditions, the duo successfully repaired the mechanical feed system and kept the beacon illuminated until the storm subsided at dawn. Looking out over the calm waters as the morning sun emerged, they spotted a fleet of local fishing vessels safely anchored near the bay, having navigated past the dangerous reefs by following the continuous beam of light. This harrowing experience taught young Thomas that true leadership and professional duty require unwavering courage, selflessness, and composure during systemic crises. The narrative of the watchtower became a legendary story within the coastal settlement, reminding future generations that individual perseverance can preserve an entire community from impending catastrophe."},
+  "7":{"title":"TEXT 7 — How to Create a Compost Bin at Home","body":"Composting represents an exceptionally sustainable waste management practice that converts household organic refuse into nutrient-dense soil amendments, thereby reducing municipal landfill burdens and diminishing greenhouse gas emissions. To establish a fully functional home composting system, adhere to the following systematic guidelines:\n\n1. Acquire a durable, heavy-duty plastic container with a capacity of at least fifty liters, ensuring it features a secure lid, and carefully drill uniform air ventilation holes along the lateral walls and base to facilitate optimal aerobic decomposition and moisture drainage.\n2. Deposit a foundational layer approximately ten centimeters thick consisting of dry, carbon-rich materials—such as coarse twigs, dried leaves, or shredded unbleached cardboard—to promote baseline aeration and absorb excess liquid runoff.\n3. Introduce nitrogen-rich green materials, including raw vegetable trimmings, fruit peels, and spent coffee grounds, which provide the essential nutrients required by decomposing microorganisms to break down complex organic matter.\n4. Systematically alternate between green and brown material layers in a three-to-one volumetric ratio, maintaining a balanced chemical composition that prevents odor generation and optimizes microbial metabolism.\n5. Hydrate the mixture lightly using a spray nozzle until the moisture level resembles a thoroughly wrung-out sponge; excessive liquid content must be avoided, as anaerobic conditions will retard decomposition and produce unpleasant odors.\n6. Seal the container firmly and manually agitate or turn the composting mass with a small garden fork once weekly to reintroduce oxygen throughout the core substrate, thereby accelerating the biological breakdown process.\n7. Monitor the internal temperature and texture over an eight-to-twelve-week processing period; when the substrate transforms into a dark, crumbly material with an earthy aroma, the mature compost is ready for agricultural utilization."},
+  "8":{"title":"TEXT 8 — How to Conduct an Academic Research Paper Review","body":"Conducting a systematic critical review of a scholarly research paper is an essential academic skill that enables students to evaluate theoretical arguments, methodology, and empirical evidence effectively. To execute a comprehensive academic literature review, adhere to the following structured procedure:\n\n1. Conduct an initial preliminary reading of the abstract, introduction, and conclusion sections to grasp the central research thesis, primary objectives, and overarching findings of the study.\n2. Perform a thorough second reading of the full text while systematically taking contextual notes, highlighting key theoretical arguments, and identifying unfamiliar domain-specific terminology that requires further contextual clarification.\n3. Analyze the methodology section critically by evaluating whether the research design, data collection instruments, sample size, and statistical analytical tools are appropriate for addressing the core research questions posed by the authors.\n4. Scrutinize the empirical data presented in tables, graphs, and statistical models to verify whether the visual representations align logically with the authors' written interpretations and statistical claims.\n5. Assess the theoretical discussion section by evaluating how effectively the authors integrate their findings with existing academic literature, noting any logical fallacies, unaddressed counterarguments, or analytical biases.\n6. Formulate a structured written synthesis that summarizes the paper's primary contributions, highlights its methodological strengths or limitations, and suggests potential avenues for future empirical research.\n7. Proofread your critical review to ensure that your analytical commentary maintains an objective academic tone, utilizes appropriate formal language, and includes precise academic citations for all referenced works."},
+  "9":{"title":"TEXT 9 — The Importance of Financial Literacy for Teenagers","body":"In contemporary economic frameworks, financial literacy has emerged as an indispensable competency that adolescents must master prior to transitioning into independent adulthood. With the rapid expansion of digital banking services, micro-credit platforms, and sophisticated e-commerce environments, young individuals are exposed to complex financial transactions at an unprecedentedly early age. Consequently, integrating comprehensive financial education into secondary school curricula has become an urgent educational imperative rather than an optional extracurricular endeavor.\n\nFirst, acquiring fundamental skills in budget construction and expense tracking enables teenagers to cultivate behavioral self-regulation, which effectively mitigates impulse spending habits and prevents early accumulation of consumer debt. When adolescents systematically analyze their income and expenditure patterns, they develop a sophisticated understanding of opportunity cost and long-term financial planning. Second, a thorough comprehension of core economic mechanisms—such as compound interest rates, inflation dynamics, and asset diversification—empowers individuals to initiate wealth accumulation strategies early in their productive lives. By leveraging the power of compounding interest during their early years, young investors can secure substantial capital reserves that mitigate future financial vulnerabilities.\n\nFinally, early exposure to practical financial management fosters personal autonomy and enhances critical decision-making capacities when navigating major life transitions, including higher education financing, residential leasing, and vocational career choices. Adolescents who lack structured financial training are statistically more prone to predatory lending schemes and economic instability during adulthood, which can inadvertently burden public social welfare systems.\n\nIn conclusion, equipping secondary school students with advanced financial literacy provides them with the cognitive tools necessary to navigate volatile global economic environments successfully. Educational policy-makers must therefore mandate the inclusion of practical, real-world financial management modules within standard secondary curricula. By investing in the economic competence of the youth, society ensures not only individual prosperity but also long-term national economic resilience."},
+  "10":{"title":"TEXT 10 — The Imperative of Artificial Intelligence Ethics in Education","body":"The rapid integration of artificial intelligence tools into educational environments has revolutionized teaching methodologies and learning paradigms worldwide. While generative algorithms and automated platforms offer unprecedented opportunities for personalized learning and administrative efficiency, they also introduce profound ethical dilemmas that must be addressed proactively. Consequently, establishing clear ethical guidelines and regulatory frameworks for artificial intelligence in educational institutions has become an urgent policy imperative.\n\nFirst, the unrestricted deployment of algorithmic systems in academic environments raises serious concerns regarding data privacy and surveillance. Modern educational software continuously collects vast quantities of sensitive student data, including learning patterns, behavioral metrics, and personal identifiers, which can be vulnerable to commercial exploitation or unauthorized data breaches if left unregulated. Securing robust data protection policies is therefore essential to safeguard student privacy rights. Second, over-reliance on automated generative platforms threatens to undermine the development of critical thinking and original intellectual inquiry among learners. When students rely excessively on automated tools to complete complex analytical tasks, they risk diminishing their cognitive abilities, problem-solving skills, and academic integrity.\n\nFurthermore, algorithmic systems frequently perpetuate inherent historical biases embedded within their training datasets, which can lead to discriminatory outcomes in automated student assessment and academic resource allocation. Educational administrators must ensure that artificial intelligence tools are audited continuously for fairness, transparency, and inclusivity to prevent worsening existing socio-economic inequalities among diverse student populations.\n\nIn conclusion, while artificial intelligence holds immense transformative potential for modern education, its application must be guided by rigorous ethical principles and policy oversight. Policy-makers and educators must collaborate to establish comprehensive ethical standards that prioritize student privacy, promote intellectual independence, and ensure equitable access. By proactively regulating artificial intelligence technologies, society can harness their educational benefits while effectively mitigating their potential systemic risks."}
+};
 
-// 1. EVENT LISTENER: TOMBOL MULAI LATIHAN
-document.getElementById('startBtn').addEventListener('click', function() {
-  const name = document.getElementById('studentName').value.trim();
-  const studentClass = document.getElementById('studentClass').value;
-  const errorEl = document.getElementById('loginError');
+let student = {name:"", className:"", answers:{}, checked:{}};
 
-  if (!name || !studentClass) {
-    errorEl.textContent = 'Harap isi Nama Lengkap dan Pilih Kelas terlebih dahulu!';
-    return;
-  }
-
-  errorEl.textContent = '';
-  document.getElementById('studentBadge').textContent = `${name} (${studentClass})`;
-  document.getElementById('loginCard').classList.add('hidden');
-  document.getElementById('examSection').classList.remove('hidden');
-
-  renderQuestions();
-});
-
-// 2. RENDER SOAL KE HALAMAN
-function renderQuestions() {
-  const qContainer = document.getElementById('questions');
-  document.getElementById('totalCount').textContent = questions.length;
-  qContainer.innerHTML = '';
-
-  questions.forEach((q, qIdx) => {
-    const qCard = document.createElement('div');
-    qCard.className = 'card question';
-    
-    let optsHtml = '';
-    q.opts.forEach((opt, oIdx) => {
-      optsHtml += `
-      <label class="option" id="opt_${qIdx}_${oIdx}">
-        <input type="radio" name="q_${qIdx}" value="${oIdx}" onclick="checkAnswer(${qIdx}, ${oIdx})">
-        ${opt}
-      </label>`;
-    });
-
-    qCard.innerHTML = `
-      <div class="qhead">
-        <span class="difficulty">Tingkat: ${q.difficulty}</span>
-        Soal ${qIdx + 1}: ${q.q}
-      </div>
-      <div class="options-group">${optsHtml}</div>
-      <div id="exp_${qIdx}" class="explanation-box hidden"></div>
-    `;
-    qContainer.appendChild(qCard);
-  });
+function startPractice(){
+ const name=document.getElementById("studentName").value.trim();
+ const cls=document.getElementById("studentClass").value;
+ const err=document.getElementById("loginError");
+ err.textContent="";
+ if(!name||!cls){err.textContent="Silakan lengkapi nama dan kelas Anda terlebih dahulu.";return;}
+ 
+ student={name,className:cls,answers:{},checked:{}};
+ document.getElementById("loginCard").classList.add("hidden");
+ document.getElementById("examSection").classList.remove("hidden");
+ document.getElementById("studentBadge").textContent=name+" • "+cls;
+ renderQuestions();
 }
 
-// 3. LOGIKA CEK & PEMBAHASAN LANGSUNG
-function checkAnswer(qIdx, selectedOpt) {
-  if (userAnswers[qIdx] !== undefined) return; // Mencegah perubahan jawaban
-  
-  userAnswers[qIdx] = selectedOpt;
-  const qData = questions[qIdx];
-  const isCorrect = selectedOpt === qData.a;
-  const expBox = document.getElementById(`exp_${qIdx}`);
-  
-  // Nonaktifkan radio button pada soal ini
-  const radios = document.getElementsByName(`q_${qIdx}`);
-  radios.forEach(r => r.disabled = true);
+function renderQuestions(){
+ const root=document.getElementById("questions"); root.innerHTML="";
+ let lastText=0;
+ questions.forEach((x,i)=>{
+   if(x.text!==lastText){
+     const t=texts[x.text];
+     root.insertAdjacentHTML("beforeend",`<div class="card"><h2>${t.title}</h2><div class="text-box" style="white-space:pre-line">${t.body}</div></div>`);
+     lastText=x.text;
+   }
+   
+   const isMultiple = Array.isArray(x.a) && x.a.length > 1;
+   const inputType = isMultiple ? "checkbox" : "radio";
+   const letters = ["A","B","C","D","E"];
+   
+   let typeLabel = "Pilihan Ganda Biasa";
+   if (isMultiple) {
+     typeLabel = `Pilihan Ganda Kompleks (Pilih ${x.a.length})`;
+   } else if (x.subtype === "complex") {
+     typeLabel = "Pilihan Ganda Kompleks";
+   } else if (x.subtype === "matching") {
+     typeLabel = "Menjodohkan / Mengurutkan";
+   }
 
-  // Highlighting Pilihan Jawaban
-  const selectedLabel = document.getElementById(`opt_${qIdx}_${selectedOpt}`);
-  if (isCorrect) {
-    selectedLabel.classList.add('opt-correct-highlight');
-  } else {
-    selectedLabel.classList.add('opt-wrong-highlight');
-    document.getElementById(`opt_${qIdx}_${qData.a}`).classList.add('opt-correct-highlight');
-  }
+   let opts=x.opts.map((o,j)=>`
+     <label class="option" id="opt_${i}_${j}">
+       <input type="${inputType}" name="q${i}" value="${j}" onchange="saveAnswer(${i})"> 
+       <b>${letters[j]}.</b> ${o}
+     </label>
+   `).join("");
 
-  // Tampilkan Pembahasan
-  expBox.classList.remove('hidden');
-  expBox.className = `explanation-box ${isCorrect ? 'exp-correct' : 'exp-wrong'}`;
-  expBox.innerHTML = `
-    <span class="status-tag ${isCorrect ? 'tag-correct' : 'tag-wrong'}">
-      ${isCorrect ? 'Jawaban Kamu Benar!' : 'Jawaban Kamu Salah'}
-    </span>
-    <div>${qData.exp}</div>
-  `;
-
-  updateProgress();
+   root.insertAdjacentHTML("beforeend",`
+     <div class="question" id="qbox${i}">
+       <div class="qhead">Soal ${i+1} <span class="difficulty">${typeLabel} • ${x.difficulty.toUpperCase()}</span></div>
+       <div style="white-space:pre-line; margin-bottom:12px">${x.q}</div>
+       ${opts}
+       <div style="margin-top:15px">
+         <button class="secondary" id="checkBtn_${i}" onclick="checkAnswer(${i})" disabled>Cek Jawaban & Pembahasan</button>
+       </div>
+       <div id="exp_${i}" class="hidden"></div>
+     </div>
+   `);
+ });
 }
 
-// 4. UPDATE PROGRESS BAR
-function updateProgress() {
-  const answered = Object.keys(userAnswers).length;
-  const total = questions.length;
-  document.getElementById('answeredCount').textContent = answered;
-  document.getElementById('progressBar').style.width = `${(answered / total) * 100}%`;
+function saveAnswer(i){
+ const els=[...document.querySelectorAll(`input[name="q${i}"]:checked`)];
+ student.answers[i]=els.map(e=>Number(e.value));
+ 
+ // Aktifkan tombol cek jika setidaknya ada 1 opsi yang dipilih
+ const checkBtn = document.getElementById(`checkBtn_${i}`);
+ if(student.answers[i] && student.answers[i].length > 0 && !student.checked[i]){
+   checkBtn.disabled = false;
+ } else if(!student.checked[i]) {
+   checkBtn.disabled = true;
+ }
 }
 
-// 5. FITUR TEXT-TO-SPEECH (NATURAL VOICE SELECTION)
-function toggleSpeech(elementId, btn) {
-  if (!('speechSynthesis' in window)) {
-    alert('Browser kamu tidak mendukung fitur Text-to-Speech.');
-    return;
-  }
-
-  if (synth.speaking) {
-    synth.cancel();
-    btn.classList.remove('playing');
-    btn.querySelector('span').textContent = '🔊';
-    if (currentUtterance) currentUtterance = null;
-    return;
-  }
-
-  const rawText = document.getElementById(elementId).innerText;
-  currentUtterance = new SpeechSynthesisUtterance(rawText);
-
-  // Memilih suara natural terbaik (English US/UK Natural)
-  const voices = synth.getVoices();
-  let naturalVoice = voices.find(v => (v.lang === 'en-US' || v.lang === 'en-GB') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha')));
-  
-  if (!naturalVoice) {
-    naturalVoice = voices.find(v => v.lang.startsWith('en'));
-  }
-
-  if (naturalVoice) {
-    currentUtterance.voice = naturalVoice;
-  }
-
-  // Pengaturan ritme agar terdengar lebih alami (tidak seperti robot)
-  currentUtterance.rate = 0.88; // Kecepatan agak diperlambat untuk kejelasan artikulasi
-  currentUtterance.pitch = 1.0; // Nada natural
-
-  btn.classList.add('playing');
-  btn.querySelector('span').textContent = '⏹️';
-
-  currentUtterance.onend = function() {
-    btn.classList.remove('playing');
-    btn.querySelector('span').textContent = '🔊';
-  };
-
-  currentUtterance.onerror = function() {
-    btn.classList.remove('playing');
-    btn.querySelector('span').textContent = '🔊';
-  };
-
-  synth.speak(currentUtterance);
+function sameSet(a,b){
+ if(!a || !b) return false;
+ return a.length===b.length && a.slice().sort((x,y)=>x-y).every((v,idx)=>v===b.slice().sort((x,y)=>x-y)[idx]);
 }
 
-// Memastikan daftar voice dimuat oleh browser
-if ('speechSynthesis' in window) {
-  window.speechSynthesis.onvoiceschanged = function() {
-    window.speechSynthesis.getVoices();
-  };
+function checkAnswer(i){
+ const userAns = student.answers[i] || [];
+ const q = questions[i];
+ const isCorrect = sameSet(userAns, q.a);
+ 
+ student.checked[i] = true;
+ 
+ // Nonaktifkan input dan tombol setelah dicek
+ const inputs = document.querySelectorAll(`input[name="q${i}"]`);
+ inputs.forEach(inp => inp.disabled = true);
+ document.getElementById(`checkBtn_${i}`).disabled = true;
+
+ // Highlight Pilihan Opsi
+ const letters = ["A","B","C","D","E"];
+ q.opts.forEach((_, j) => {
+   const optEl = document.getElementById(`opt_${i}_${j}`);
+   if(q.a.includes(j)){
+     optEl.classList.add("opt-correct-highlight");
+   } else if(userAns.includes(j)){
+     optEl.classList.add("opt-wrong-highlight");
+   }
+ });
+
+ // Tampilkan Kotak Pembahasan Detil
+ const expDiv = document.getElementById(`exp_${i}`);
+ expDiv.classList.remove("hidden");
+ expDiv.className = `explanation-box ${isCorrect ? 'exp-correct' : 'exp-wrong'}`;
+ 
+ const statusHtml = isCorrect 
+   ? `<span class="status-tag tag-correct">JAWABAN BENAR</span>` 
+   : `<span class="status-tag tag-wrong">JAWABAN KURANG TEPAT</span>`;
+
+ expDiv.innerHTML = `
+   ${statusHtml}<br>
+   ${q.exp}
+ `;
+
+ updateProgress();
 }
 
-// 6. FINISH EXAM & TAMPILKAN HASIL
-document.getElementById('finishBtn').addEventListener('click', function() {
-  const total = questions.length;
-  let correctCount = 0;
-  
-  for (let i = 0; i < total; i++) {
-    if (userAnswers[i] === questions[i].a) {
-      correctCount++;
-    }
-  }
+function updateProgress(){
+ const n = Object.keys(student.checked).length;
+ document.getElementById("answeredCount").textContent = n;
+ document.getElementById("progressBar").style.width = (n / questions.length * 100) + "%";
+}
 
-  const finalScore = Math.round((correctCount / total) * 100);
-  if (synth.speaking) synth.cancel(); // Hentikan audio jika masih menyala
+function finishPractice(){
+ const n = Object.keys(student.checked).length;
+ if(n < questions.length){
+   if(!confirm(`Anda baru memeriksa pembahasan ${n} dari ${questions.length} soal. Yakin ingin mengakhiri latihan?`)) return;
+ }
+ 
+ let points = 0;
+ questions.forEach((x, i) => {
+   if(sameSet(student.answers[i], x.a)) points++;
+ });
+ 
+ const finalScore = Math.round((points / questions.length) * 100);
+ 
+ document.getElementById("examSection").classList.add("hidden");
+ document.getElementById("resultSection").classList.remove("hidden");
+ document.getElementById("finalScore").textContent = finalScore;
+ document.getElementById("resultText").innerHTML = `
+   Selamat <b>${student.name}</b> (${student.className})! Anda telah menyelesaikan latihan soal.<br>
+   Jawaban Benar: <b>${points}</b> dari <b>${questions.length}</b> soal.
+ `;
+}
 
-  document.getElementById('examSection').classList.add('hidden');
-  document.getElementById('resultSection').classList.remove('hidden');
-  document.getElementById('finalScore').textContent = finalScore;
-  document.getElementById('resultText').textContent = `Kamu berhasil menjawab benar ${correctCount} dari ${total} soal.`;
-});
+document.getElementById("startBtn").addEventListener("click", startPractice);
+document.getElementById("finishBtn").addEventListener("click", finishPractice);
 </script>
-
 </body>
 </html>
